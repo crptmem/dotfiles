@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher", "cpu", "memory"],
+	"modules-left": ["custom/launcher"],
 	"modules-center": ["wlr/workspaces"],
-	"modules-right": ["pulseaudio", "clock"],
+	"modules-right": ["cpu", "memory", "pulseaudio", "clock", "temperature", "custom/powermenu"],
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
@@ -29,16 +29,27 @@
 		"on-scroll-up": "light -A 5",
 		"on-scroll-down": "light -U 5"
 	},
+	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format-critical": " {temperatureC} °C",
+		"format": " {temperatureC} °C",
+		"interval": 2
+	},
 	"tray":{
 		"icon-size":18,
 		"spacing": 10
 	},
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
 	"clock": {
 		"format": "{:  %H:%M     %d/%m/%Y}"
 	},
 	"cpu": {
 		"interval": "15",
-		"format": "  {}%",
+		"format": "  {usage}%",
 		"max-length": 10
 	},
 	"memory": {
@@ -48,8 +59,12 @@
 	},
 	"custom/launcher":{
 		"format": "⃝",
-		"on-click": "rofi -show drun",
+		"on-click": "sh $HOME/.config/rofi/bin/launcher",
 		"on-click-right": "killall rofi"
+	},
+	  "custom/powermenu":{
+		"format": "",
+		"on-click": "sh $HOME/.config/rofi/bin/powermenu"
 	},
 	"wlr/workspaces": {
 		"format": "{icon}",
