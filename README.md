@@ -8,3 +8,19 @@
 
 <p align="center">my funny nvidia + hyprland dots</p>
 <img src="https://github.com/crptmem/dotfiles/assets/88046785/05f6afe6-650c-4037-b79d-4d889a2bc196"/>
+
+> if wayland works with my dumb novideo card it doesn't mean it will work with your
+
+### software
+* <b>gentoo linux</b>
+* hyprland (wm)
+* waybar (bar)
+* <a href="https://github.com/mortie/swaylock-effects">swaylock-effects</a> (lock screen)
+* swaync (notifications)
+* rofi (launcher and powermenu)
+
+### hardware
+* ryzen 7 3700x
+* gigabyte aorus b450 elite v2
+* 2x8gb
+* gtx 1650
