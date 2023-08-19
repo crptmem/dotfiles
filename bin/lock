@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+sleep 0.2
+swaylock \
+        --screenshots \
+        --clock \
+        --indicator \
+        --indicator-radius 100 \
+        --indicator-thickness 15 \
+        --effect-blur 15x10 \
+        --effect-vignette 0.5:0.5 \
+        --ring-color c9cbff \
+        --key-hl-color 880033 \
+        --line-color 00000000 \
+        --inside-color 00000088 \
+        --separator-color 00000000 \
+        --grace 1 \
+        --fade-in 0.2 --font "Liga SFMono Nerd Font"
