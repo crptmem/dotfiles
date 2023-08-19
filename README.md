@@ -8,6 +8,8 @@
 
 <p align="center">my funny nvidia + hyprland dots</p>
 <img src="https://github.com/crptmem/dotfiles/assets/88046785/05f6afe6-650c-4037-b79d-4d889a2bc196"/>
+<img src="https://github.com/crptmem/dotfiles/assets/88046785/b6a63b29-e6ec-45bb-9023-cec87b5f9435"/>
+<img src="https://github.com/crptmem/dotfiles/assets/88046785/28347bf5-bd36-407f-a42a-9169e9124071"/>
 
 > if wayland works with my dumb novideo card it doesn't mean it will work with your
 
