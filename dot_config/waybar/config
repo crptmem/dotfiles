@@ -1,0 +1,138 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 51,
+	"spacing": 5,
+	"margin-bottom": -11,
+	"modules-left": [
+		"wlr/workspaces"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"temperature",
+		"pulseaudio",
+		"clock",
+		"date"
+	],
+	"modules-center": [
+		"custom/dynamic_pill"
+	],
+	"custom/dynamic_pill": {
+		"return-type": "json",
+		"exec": "~/.config/hypr/scripts/tools/start_dyn",
+		"escape": true
+	},
+	"keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		"format": "{name} {icon}",
+		"format-icons": {
+			"locked": "",
+			"unlocked": ""
+		}
+	},
+	"wlr/workspaces": {
+		"format": "{icon}",
+		"format-active": " {icon} ",
+		"on-click": "activate"
+	},
+	"sway/mode": {
+		"format": "<span style=\"italic\">{}</span>"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>",
+		"interval": 60,
+		"format": "{:  %H:%M     %d/%m/%y}",
+		"max-length": 25
+	},
+	"cpu": {
+		"interval": "15",
+		"format": "  {usage}%",
+		"max-length": 10
+	},
+	"memory": {
+		"interval": 30,
+		"format": "  {}%",
+		"max-length": 10
+	},
+	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format-critical": " {temperatureC} °C",
+		"format": " {temperatureC} °C",
+		"interval": 2
+	},
+	"backlight": {
+		"format": "{percent}% {icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"battery": {
+		"states": {
+			"warning": 50,
+			"critical": 20
+		},
+		"format": "{icon}",
+		"format-charging": "",
+		"format-plugged": "",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"battery#bat2": {
+		"bat": "BAT2"
+	},
+	"network": {
+		"format-wifi": "",
+		"format-ethernet": "",
+		"tooltip-format": "via {gwaddr} {ifname}",
+		"format-linked": "",
+		"format-disconnected": "wifi",
+		"format-alt": "   "
+	},
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-muted": "   ",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+	"custom/media": {
+		"format": "{icon} {}",
+		"return-type": "json",
+		"max-length": 40,
+		"format-icons": {
+			"spotify": "",
+			"default": "🎜"
+		},
+		"escape": true,
+		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+	}
+}
