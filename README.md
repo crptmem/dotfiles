@@ -6,7 +6,7 @@
   <a href="https://github.com/corruptmemry/dotfiles/network/members"><img src="https://img.shields.io/github/forks/corruptmemry/dotfiles?colorA=151515&colorB=D9BC8C&style=for-the-badge&logo=github"></a>
 </p>
 
-![2024-01-03_13-20](https://github.com/crptmem/dotfiles/assets/88046785/6ad6f329-4a82-43a3-bd73-587fa7780351)
+![2024-01-03_14-18](https://github.com/crptmem/dotfiles/assets/88046785/65c86800-714a-49bf-9aea-46060ec2c41b)
 
 ### software
 * <b>gentoo linux</b>
