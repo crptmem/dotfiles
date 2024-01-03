@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"position": "top",
-	"height": 51,
+	"height": 45,
 	"spacing": 5,
 	"margin-bottom": -11,
 	"modules-left": [
@@ -12,17 +12,17 @@
 		"memory",
 		"temperature",
 		"pulseaudio",
-		"clock",
-		"date"
+		"custom/weather",
+		"clock"
 	],
 	"modules-center": [
-		"custom/dynamic_pill"
+		
 	],
-	"custom/dynamic_pill": {
-		"return-type": "json",
-		"exec": "~/.config/hypr/scripts/tools/start_dyn",
-		"escape": true
-	},
+	"custom/weather": {
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/run.sh",
+        "escape": true
+    },
 	"keyboard-state": {
 		"numlock": true,
 		"capslock": true,
